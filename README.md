@@ -1,4 +1,4 @@
-# Système d'autentification
+# Système d'authentification
 
 ## PHP (Sessions)
 ## MySql
