@@ -52,12 +52,8 @@ class users{
     // login user
     function login(){
         // select all query
-        $query = "SELECT
-                    `id_user`, `email`, `password`
-                FROM
-                    " . $this->table_name . " 
-                WHERE
-                    email='".$this->email."' AND password='".$this->password."'";
+        $query = "SELECT * FROM
+                    " . $this->table_name . "  WHERE email='".$this->email."' AND password='".$this->password."'";
         // prepare query statement
         $stmt = $this->conn->prepare($query);
         // execute query

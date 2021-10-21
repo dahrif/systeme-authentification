@@ -34,7 +34,7 @@ class App extends React.Component {
                 <input id="password" name="password" type="password" className="input" data-type="password" placeholder="Mot de passe" />
               </div>
               <div className="group">
-               <input type="submit" className="button" defaultValue="Connexion" />
+               <input type="submit" name="submit" className="button" defaultValue="Connexion" />
               </div>
               <div className="hr" />
               
@@ -55,7 +55,7 @@ class App extends React.Component {
            
               <div className="group">
             
-              <input type="submit" className="button" defaultValue="Créer votre compte" />
+              <input type="submit" name="submit" className="button" defaultValue="Créer votre compte" />
             
               </div>
              
