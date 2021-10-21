@@ -15,16 +15,17 @@ $user = new users ($db);
 $user->email = isset($_POST['email']) ? $_SESSION['email']=$_POST['email'] : die();
 $user->password = base64_encode(isset($_POST['password']) ? $_SESSION['password']= $_POST['password'] : die());
 
-if (isset($_POST['password'])){
+if (isset($_POST['email'])){
     $email = $_SESSION['email'];
     $pass = $_SESSION['password'];
+
 }
 // read the details of user to be edited
 $stmt = $user->login();
 if($stmt->rowCount() > 0){
     // get retrieved row
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
-    echo "hello $email";
+    echo "hello $email <a class='btn btn-danger' href='logout.php'>Log out</a>";
 }
 
 else{
