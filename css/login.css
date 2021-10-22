@@ -14,17 +14,17 @@ body{
   .login-wrap{
     width:100%;
     margin:auto;
-    margin-top: 30px;
+    margin-top: 10vh;
     max-width:525px;
-    min-height:570px;
+    min-height:80vh;
     position:relative;
     box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
-    background:#fff
+    background:#fff;
 
   }
   .login-html{
     width:100%;
-    height:90vh;
+    height:80vh;
     position:absolute;
     padding:60px 70px 50px 70px;
     background:#fff;
@@ -32,16 +32,16 @@ body{
 
   .login-html .sign-in-htm,
   .login-html .sign-up-htm{
-    top:10 vh;
+    top:5vh;
     left:0;
     right:0;
     bottom:0;
     position:absolute;
-    -webkit-transform:rotateY(180deg);
-            transform:rotateY(180deg);
+    -webkit-transform:rotateX(180deg);
+            transform:rotateX(180deg);
     -webkit-backface-visibility:hidden;
             backface-visibility:hidden;
-    transition:all .4s linear;
+    transition:all .7s linear;
   }
   .login-html .sign-in,
   .login-html .sign-up,
@@ -87,7 +87,7 @@ body{
   .login-form .group .button{
     border:none;
     padding:15px 20px;
-    margin-top: 10px;
+    margin-bottom: 15px;
     border-radius:25px;
     background:#E8F0FE;
   }
