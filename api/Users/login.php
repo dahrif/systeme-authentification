@@ -28,11 +28,11 @@ if($stmt->rowCount() > 0){
     // get retrieved row
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
     
-    echo
-     "<div class='text-center'><h3>hello $username </h3>
-    <a class='btn btn-danger' href='logout.php'>Log out</a></div>";
+    // echo
+    //  "<div class='text-center'><h3>hello $username </h3>
+    // <a class='btn btn-danger' href='logout.php'>Déxonnexion</a></div>";
 
-    // header('location:../../admin.php');
+    header('Location: ../../index.php');
 
 }
 

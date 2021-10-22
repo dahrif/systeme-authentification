@@ -1,7 +1,8 @@
 <?php 
 
-include 'api/Users/login.php';
-
+require_once ('api/config/database.php');
+require_once ('api/objects/user.php');
+require_once ('api/Users/login.php');
 
 if (isset($_POST['submit'])){
     $username = $_SESSION['username'];
@@ -18,12 +19,12 @@ if (isset($_POST['submit'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Welcome</title>
+    <title>Title</title>
 </head>
 <body>
     
     <?php
-     echo "<div class='text-center'><h3>hello $username </h3> <a class='btn btn-danger' href='logout.php'>Log out</a></div>";
+     echo "<div class='text-center'><h3>hello $username </h3> <a class='btn btn-danger' href='api/Users/logout.php'>Deconnection</a></div>";
      ?>
 </body>
 </html>
