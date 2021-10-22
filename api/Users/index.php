@@ -1,15 +1,9 @@
 <?php 
-
-require_once ('api/config/database.php');
-require_once ('api/objects/user.php');
-require_once ('api/Users/login.php');
-
 session_start();
 
-if (isset($_POST['submit'])){
-    $username = $_SESSION['username'];
-    $pass = $_SESSION['password'];
 
+if (!isset($_SESSION['username'])){
+header("location: login.php");
 }
 
 ?>
@@ -26,7 +20,8 @@ if (isset($_POST['submit'])){
 <body>
     
     <?php
-     echo "<div class='text-center'><h3>hello $username </h3> <a class='btn btn-danger' href='api/Users/logout.php'>Deconnection</a></div>";
+     echo "<div class='text-center'><h3>hello" .$_SESSION['username']. "</h3> <a class='btn btn-danger' href='logout.php'>Deconnection</a></div>";
      ?>
+
 </body>
 </html>
