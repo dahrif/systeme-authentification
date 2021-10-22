@@ -53,7 +53,7 @@ class users{
     function login(){
         // select all query
         $query = "SELECT * FROM
-                    " . $this->table_name . "  WHERE email='".$this->email."' AND password='".$this->password."'";
+                    " . $this->table_name . "  WHERE username='".$this->username."' AND password='".$this->password."'";
         // prepare query statement
         $stmt = $this->conn->prepare($query);
         // execute query
@@ -61,7 +61,7 @@ class users{
         return $stmt;
     }
     function isAlreadyExist(){
-        $query = "SELECT * FROM " . $this->table_name . "  WHERE email='".$this->email."'";
+        $query = "SELECT * FROM " . $this->table_name . "  WHERE username='".$this->username."'";
         // prepare query statement
         $stmt = $this->conn->prepare($query);
         // execute query

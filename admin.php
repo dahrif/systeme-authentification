@@ -1,9 +1,12 @@
 <?php 
 
-session_start();
+include 'api/Users/login.php';
 
-if (!isset($_SESSION['username'])) {
-    header("Location: api/Users/login.php");
+
+if (isset($_POST['submit'])){
+    $username = $_SESSION['username'];
+    $pass = $_SESSION['password'];
+
 }
 
 ?>
@@ -15,10 +18,12 @@ if (!isset($_SESSION['username'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title class="wlcm">Welcome</title>
+    <title>Welcome</title>
 </head>
 <body>
     
-    <?php echo "<div class='text-center'><h3>hello $email </h3> <a class='btn btn-danger' href='logout.php'>Log out</a></div>";?>
+    <?php
+     echo "<div class='text-center'><h3>hello $username </h3> <a class='btn btn-danger' href='logout.php'>Log out</a></div>";
+     ?>
 </body>
 </html>

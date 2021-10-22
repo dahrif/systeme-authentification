@@ -28,7 +28,7 @@ class App extends React.Component {
           <div className="login-form">
             <form className="sign-in-htm" action="./api/Users/login.php" method="POST">
               <div className="group">
-                <input id="email" name="email" type="text" className="input" placeholder="Email"/>
+                <input id="username" name="username" type="text" className="input" placeholder="Nom d'utilisateur"/>
               </div>
               <div className="group">
                 <input id="password" name="password" type="password" className="input" data-type="password" placeholder="Mot de passe" />

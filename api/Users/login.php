@@ -1,9 +1,10 @@
 <?php
+
 session_start();
 
 // include database and object files
-include_once '../config/database.php';
-include_once '../objects/user.php';
+include '../config/database.php';
+include '../objects/user.php';
  
 // get database connection
 $database = new Database();
@@ -13,11 +14,12 @@ $db = $database->getConnection();
 $user = new users ($db);
 
 // set ID property of user to be edited
-$user->email = isset($_POST['email']) ? $_SESSION['email']=$_POST['email'] : die();
+// $user->username = isset($_POST['username']) ? $_SESSION['username']=$_POST['username'] : die();
+$user->username = isset($_POST['username']) ? $_SESSION['username']=$_POST['username'] : die();
 $user->password = base64_encode(isset($_POST['password']) ? $_SESSION['password']= $_POST['password'] : die());
 
 if (isset($_POST['submit'])){
-    $email = $_SESSION['email'];
+    $username = $_SESSION['username'];
     $pass = $_SESSION['password'];
 }
 // read the details of user to be edited
@@ -25,7 +27,13 @@ $stmt = $user->login();
 if($stmt->rowCount() > 0){
     // get retrieved row
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
-    echo "hello $email <a class='btn btn-danger' href='logout.php'>Log out</a>";
+    
+    echo
+     "<div class='text-center'><h3>hello $username </h3>
+    <a class='btn btn-danger' href='logout.php'>Log out</a></div>";
+
+    // header('location:../../admin.php');
+
 }
 
 else{
