@@ -4,6 +4,8 @@ require_once ('api/config/database.php');
 require_once ('api/objects/user.php');
 require_once ('api/Users/login.php');
 
+session_start();
+
 if (isset($_POST['submit'])){
     $username = $_SESSION['username'];
     $pass = $_SESSION['password'];

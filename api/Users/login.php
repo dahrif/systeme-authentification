@@ -1,13 +1,13 @@
 <?php
-
-session_start();
-
 // include database and object files
 include '../config/database.php';
 include '../objects/user.php';
- 
+
+session_start();
+
 // get database connection
 $database = new Database();
+
 $db = $database->getConnection();
  
 // prepare user object
@@ -28,11 +28,11 @@ if($stmt->rowCount() > 0){
     // get retrieved row
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
     
-    // echo
-    //  "<div class='text-center'><h3>hello $username </h3>
-    // <a class='btn btn-danger' href='logout.php'>Déxonnexion</a></div>";
+    echo
+     "<div class='text-center user'><h3>Bonjour <span class='username'> $username </span>  </h3>
+    <a class='btn btn-danger' href='logout.php'>Déxonnexion</a></div>";
 
-    header('Location: ../../index.php');
+    // header('Location: index.php');
 
 }
 
@@ -52,8 +52,10 @@ else{
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../../css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
 </body>
 </html>
+

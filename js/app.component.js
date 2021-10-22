@@ -28,10 +28,10 @@ class App extends React.Component {
           <div className="login-form">
             <form className="sign-in-htm" action="./api/Users/login.php" method="POST">
               <div className="group">
-                <input id="username" name="username" type="text" className="input" placeholder="Nom d'utilisateur"/>
+                <input id="username" name="username" type="text" className="input" placeholder="Nom d'utilisateur" required/>
               </div>
               <div className="group">
-                <input id="password" name="password" type="password" className="input" data-type="password" placeholder="Mot de passe" />
+                <input id="password" name="password" type="password" className="input" placeholder="Mot de passe"  required/>
               </div>
               <div className="group">
                <input type="submit" name="submit" className="button" defaultValue="Connexion" />
@@ -41,16 +41,16 @@ class App extends React.Component {
             </form>
             <form className="sign-up-htm" action="./api/Users/signup.php" method="POST">
               <div className="group">
-                <input id="username" name="username" type="text" className="input" placeholder="Nom d'utilisateur"/>
+                <input id="username" name="username" type="text" className="input" placeholder="Nom d'utilisateur" required/>
               </div>
               <div className="group">
-                <input id="email" name="email" type="text" className="input" placeholder="Email" />
+                <input id="email" name="email" type="text" className="input" placeholder="Email" required />
               </div>
               <div className="group">
-                <input id="password" name="password" type="password" className="input" data-type="password" placeholder="Mot de passe" />
+                <input id="password" name="password" type="password" className="input" placeholder="Mot de passe" required />
               </div>
               <div className="group">
-                <input id="pass" type="password" className="input" data-type="password" placeholder="Confirmer mot de passe" />
+                <input id="pass" type="password" className="input" placeholder="Confirmer mot de passe" required />
               </div>
            
               <div className="group">
