@@ -23,10 +23,9 @@ header("location: ../../login.html");
 <body>
     
     <?php
+    
      echo "<div class='text-center user'><h3>Coucou <span class='username'>" .$_SESSION['username']. "</span> </h3> <a class='btn btn-danger' href='logout.php'>Deconnection</a></div>";
 
-    //  "<div class='text-center user'><h3>Bonjour <span class='username'> $username </span>  </h3>
-    // <a class='btn btn-danger' href='logout.php'>Déxonnexion</a></div>";
      ?>
 
 </body>

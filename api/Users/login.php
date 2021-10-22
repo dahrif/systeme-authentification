@@ -24,13 +24,10 @@ if (isset($_POST['submit'])){
 }
 // read the details of user to be edited
 $stmt = $user->login();
+
 if($stmt->rowCount() > 0){
     // get retrieved row
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
-    
-    // echo
-    //  "<div class='text-center user'><h3>Bonjour <span class='username'> $username </span>  </h3>
-    // <a class='btn btn-danger' href='logout.php'>Déxonnexion</a></div>";
 
     header('Location: index.php');
     exit();
